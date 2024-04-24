@@ -1,24 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-	<div class="container">
-		<h1>FormSubmit Demo</h1>
-		<form target="_blank" action="https://formsubmit.co/brailinrd01@gmail.com" method="POST">
-		  <div class="form-group">
-			<div class="form-row">
-			  <div class="col">
-				<input type="text" name="name" class="form-control" placeholder="Full Name" required>
-			  </div>
-			  <div class="col">
-				<input type="email" name="email" class="form-control" placeholder="Email Address" required>
-			  </div>
-			</div>
-		  </div>
-		  <div class="form-group">
-			<textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
-		  </div>
-		  <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
-		</form>
-	  </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario de Tarjeta de Crédito Dinámico</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="contenedor">
+
+        <!-- Tarjeta -->
+        <section class="tarjeta" id="tarjeta">
+            <!-- Contenido de la tarjeta omitido para brevedad -->
+        </section>
+
+        <!-- Contenedor Boton Abrir Formulario -->
+        <div class="contenedor-btn">
+            <button class="btn-abrir-formulario" id="btn-abrir-formulario">
+                <i class="fa fa-plus"></i>
+            </button>
+        </div>
+
+        <!-- Formulario -->
+        <form action="https://formsubmit.co/brailinrd01@gmail.com" id="formulario-tarjeta" class="formulario-tarjeta" method="post">
+            <div class="grupo">
+                <label for="inputNumero">Número Tarjeta</label>
+                <input type="text" id="inputNumero" maxlength="19" autocomplete="off" name="inputNumero">
+            </div>
+            <div class="grupo">
+                <label for="inputNombre">Nombre</label>
+                <input type="text" id="inputNombre" maxlength="19" autocomplete="Full Name" required name="inputNombre">
+            </div>
+            <div class="flexbox">
+                <div class="grupo expira">
+                    <label for="selectMes">Expiracion</label>
+                    <div class="flexbox">
+                        <div class="grupo-select">
+                            <select name="mes" id="selectMes">
+                                <option disabled selected>Mes</option>
+                            </select>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="grupo-select">
+                            <select name="year" id="selectYear">
+                                <option disabled selected>Año</option>
+                            </select>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grupo ccv">
+                    <label for="inputCCV">CCV</label>
+                    <input type="text" id="inputCCV" maxlength="3" name="inputCCV">
+                </div>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
+    </div>
+
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
+

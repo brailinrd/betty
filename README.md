@@ -1,8 +1,4 @@
-# formulario_simple_register
-Esto es un formulario HTML sencillo, que registra y almacena datos a la base de datos.
+# Formulario Dinámico para Tarjeta de Crédito | HTML, CSS y Javascript
+### 
 
-## ESTO ES UN TRABAJO FORMULARIO HMTL SENCILLO
----
-## screenshot
----
-![CAPTURA DE PANTALLA](http://imgfz.com/i/p49AobF.jpeg)
+

